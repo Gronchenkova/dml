@@ -1,0 +1,6 @@
+select *
+from CONTACTS
+where ADRESSBOOK=(select NAME
+from ADDRESSBOOKS
+join USERS on ADDRESSBOOKS.USERADDRESS=USERS.ADDRESS
+where ADDRESS='vlad@ya.ru');
