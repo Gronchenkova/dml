@@ -1,0 +1,4 @@
+select *
+from LETTER
+where DATA_TIME=TO_DATE('2016-11-10', 'YYYY-MM-DD') and LETTER.ID_SENDER=(select ID from USERS where ADDRESS='vlad@ya.ru') 
+and LETTER.ID_ADDRESSEE=(select ID from USERS where ADDRESS='vadim@mail.com');
