@@ -1,0 +1,4 @@
+select *
+from LETTER
+join USERS on LETTER.ID_SENDER=USERS.ID
+where ADDRESS='vlad@ya.ru';
